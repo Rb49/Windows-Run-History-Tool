@@ -125,9 +125,10 @@ def main() -> None:
                 print("\nHistory items:")
                 for i, value in enumerate(history):
                     print(f"\t{i + 1}. {value}")
+                continue
 
             # add item
-            elif int(ans) == 2:
+            if int(ans) == 2:
                 if len(history) >= 26:
                     print("Cannot add any more items to the history list.")
                     continue
@@ -143,9 +144,10 @@ def main() -> None:
                     print("Addition was not successful.")
                 # update history
                 history, key = sort_history_reg()
+                continue
 
             # delete item
-            elif int(ans) == 3:
+            if int(ans) == 3:
                 print("History items:")
                 for i, value in enumerate(history):
                     print(f"\t{i + 1}. {value}")
@@ -161,9 +163,10 @@ def main() -> None:
                     print("Deletion was not successful.")
                 # update history
                 history, key = sort_history_reg()
+                continue
 
             # quit
-            elif int(ans) == 4:
+            if int(ans) == 4:
                 return
 
         print("\nInvalid option. Please try again!\n")
@@ -178,3 +181,4 @@ if __name__ == "__main__":
         print(str(e))
     finally:
         quit()
+        
